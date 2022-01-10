@@ -38,3 +38,7 @@ security:
       secret-key: trtlG3JK5ámáwFFgsNPhqzjqW
       # 1 hour : 60 minutes * 60 seconds * 1000 m. seconds => 3600000
       expire-length: 3600000 # test 1 minute => 60000
+
+cors-origin:
+  path:
+    web-app: http://localhost:4200/

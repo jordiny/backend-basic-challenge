@@ -39,11 +39,11 @@ public class ExchangeRateController {
     }
 
     @PostMapping("/updateValue")
-    public Mono<ResponseEntity<Response<ExchangeRateDto>>> updateExchangeRate(@RequestBody ExchangeRateBaseDto filter) {
+    public Mono<Response<ExchangeRateDto>> updateExchangeRate(@RequestBody ExchangeRateBaseDto filter) {
         Response<ExchangeRateDto> response = Response.ok();
         return Mono.just(response)
                 .zipWith(exchangeRateService.updateExchangeRate(filter))
-                .map(r -> ResponseEntity.status(404).body(r.getT1().setData(r.getT2())));
+                .map(r -> r.getT1().setData(r.getT2()));
     }
 
 }

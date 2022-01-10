@@ -2,6 +2,7 @@ package com.jmontanez.challenge.bcp.controller;
 
 import com.jmontanez.challenge.bcp.dto.request.AuthFilter;
 import com.jmontanez.challenge.bcp.dto.response.UserInfoDto;
+import com.jmontanez.challenge.bcp.dto.response.common.Response;
 import com.jmontanez.challenge.bcp.service.UserService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +17,8 @@ public class UserController {
     UserService userService;
 
     @PostMapping("/authenticate")
-    public UserInfoDto login(@RequestBody AuthFilter filter){
-        return userService.authenticate(filter);
+    public Response<UserInfoDto> login(@RequestBody AuthFilter filter){
+        Response<UserInfoDto> response=Response.ok();
+        return response.setData(userService.authenticate(filter));
     }
 }
