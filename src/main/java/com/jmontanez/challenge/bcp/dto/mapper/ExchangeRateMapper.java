@@ -1,6 +1,6 @@
 package com.jmontanez.challenge.bcp.dto.mapper;
 
-import com.jmontanez.challenge.bcp.dto.ExchangeRateDto;
+import com.jmontanez.challenge.bcp.dto.response.ExchangeRateDto;
 import com.jmontanez.challenge.bcp.entity.ExchangeRateEntity;
 
 public class ExchangeRateMapper {

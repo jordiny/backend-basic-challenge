@@ -1,0 +1,7 @@
+swagger:
+  title: Exchange Rate Service - REST APIs
+  description: BCP Challenge - Service With Spring Boot starter
+  version: 1.0
+  contact-name: Jordiny Montañez
+  contact-url: https://www.linkedin.com/in/jordinymontanez
+  contact-email: jordinym@gmail.com

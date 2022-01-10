@@ -1,14 +1,15 @@
-package com.jmontanez.challenge.bcp.service;
+package com.jmontanez.challenge.bcp.service.implementations;
 
 import com.jmontanez.challenge.bcp.common.Constants;
-import com.jmontanez.challenge.bcp.dto.ExchangeRateBaseDto;
-import com.jmontanez.challenge.bcp.dto.ExchangeRateCalculatedDto;
-import com.jmontanez.challenge.bcp.dto.ExchangeRateDto;
+import com.jmontanez.challenge.bcp.dto.response.ExchangeRateBaseDto;
+import com.jmontanez.challenge.bcp.dto.response.ExchangeRateCalculatedDto;
+import com.jmontanez.challenge.bcp.dto.response.ExchangeRateDto;
 import com.jmontanez.challenge.bcp.dto.mapper.ExchangeRateMapper;
 import com.jmontanez.challenge.bcp.dto.request.ExchangeRateFilter;
 import com.jmontanez.challenge.bcp.entity.ExchangeRateEntity;
 import com.jmontanez.challenge.bcp.repository.CurrencyRepository;
 import com.jmontanez.challenge.bcp.repository.ExchangeRateRepository;
+import com.jmontanez.challenge.bcp.service.ExchangeRateService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

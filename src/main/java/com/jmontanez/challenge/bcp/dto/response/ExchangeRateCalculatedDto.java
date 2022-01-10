@@ -1,4 +1,4 @@
-package com.jmontanez.challenge.bcp.dto;
+package com.jmontanez.challenge.bcp.dto.response;
 
 import lombok.*;
 import lombok.experimental.SuperBuilder;

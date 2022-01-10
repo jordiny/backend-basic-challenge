@@ -1,4 +1,4 @@
-package com.jmontanez.challenge.bcp.dto;
+package com.jmontanez.challenge.bcp.dto.response;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;

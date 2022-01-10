@@ -1,4 +1,4 @@
-package com.jmontanez.challenge.bcp.dto.response;
+package com.jmontanez.challenge.bcp.dto.response.common;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
