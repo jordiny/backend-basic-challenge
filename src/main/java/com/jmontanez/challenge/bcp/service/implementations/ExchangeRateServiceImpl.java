@@ -37,7 +37,7 @@ public class ExchangeRateServiceImpl implements ExchangeRateService {
 
     @Override
     public Mono<ExchangeRateCalculatedDto> calculateAmount(ExchangeRateFilter filter) {
-        return exchangeRateRepository.findExchangeRateByCurrency(filter.getCurrencyFrom(), filter.getCurrencyTo())
+        return exchangeRateRepository.findExchangeRateByCurrency(filter.getCurrencyFrom().toUpperCase(), filter.getCurrencyTo().toUpperCase())
                 .flatMap(x -> {
                             String amount = Constants.decimalFormatD2.format(x.isDivision() ?
                                     filter.getAmount() / x.getExchangeRate() :
@@ -63,7 +63,7 @@ public class ExchangeRateServiceImpl implements ExchangeRateService {
 
     @Override
     public Mono<ExchangeRateDto> updateExchangeRate(ExchangeRateBaseDto filter) {
-        return exchangeRateRepository.findExchangeRateByCurrency(filter.getCurrencyFrom(), filter.getCurrencyTo())
+        return exchangeRateRepository.findExchangeRateByCurrency(filter.getCurrencyFrom().toUpperCase(), filter.getCurrencyTo().toUpperCase())
                 .flatMap(x -> {
 
                     x.setExchangeRate(filter.getExchangeRate());
